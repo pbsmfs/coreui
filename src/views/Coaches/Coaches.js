@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Badge, Card, CardBody, CardHeader, Col, Row, Table} from 'reactstrap';
 
-import usersData from '../Users/UsersData';
-//import coachesData from './CoachesData';
+import coachesData from './CoachesData';
 
 function CoachRow(props) {
     const coach = props.coach
@@ -32,7 +31,7 @@ class Coaches extends Component {
 
     render() {
         
-        const coachList = usersData.filter((coach)=> coach.id < 50)
+        const coachList = coachesData.filter((coach)=> coach.id < 50)
 
         return (
             <div className="animated fadeIn">
